@@ -140,7 +140,7 @@ body {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    color: var(--second-color);
+    color: var(--pressed-color);
     transform: scale(1);
     transition: color var(--hover-focus-trans);
 
@@ -160,7 +160,7 @@ body {
     border-radius: 2px;
     left: 0;
     top: calc(100% + 24px);
-    background-color: #FFFFFF;
+    bottom: -1px;
     transition: background-color var(--hover-focus-trans) ;
 }
 
@@ -178,6 +178,7 @@ body {
     border-radius: 2px;
     left: 0;
     top: calc(100% + 24px);
+    bottom: -1px;
     background-color: var(--pressed-color);
 }
 
@@ -252,7 +253,7 @@ body {
     padding: 16px 32px;
     margin-top: 48px;
     border: none;
-    transition: background-color var(--hover-focus-trans), box-shadow var(--hover-focus-trans);
+    transition: background-color var(--hover-focus-trans);
 }
 .main-btn:hover,
 .main-btn:focus {
@@ -586,7 +587,7 @@ body {
     border: 1px solid #E7E9FC;
     border-radius: 4px;
     padding: 12px 24px;
-    transition: color var(--hover-focus-trans), background-color var(--hover-focus-trans), border var(--hover-focus-trans), box-shadow var(--hover-focus-trans);
+    transition: color var(--hover-focus-trans), background-color var(--hover-focus-trans), border-color var(--hover-focus-trans), box-shadow var(--hover-focus-trans);
     
 
 }
@@ -642,7 +643,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(23, 26, 36, 0.3);
+    background-color: background-color: rgba(46, 47, 66, 0.4);
     backdrop-filter: blur(2px);
     z-index: var(--modal-idx);
     transition: opacity var(--hover-focus-trans), visibility var(--hover-focus-trans);
@@ -660,10 +661,12 @@ body {
     top: 50%;
     width: 408px;
     height: 584px;
+    min-height: 576px;
     background: #FCFCFC;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     transform: translate(-50%, -50%);
+    transition: transform var(--hover-focus-trans) ;
 }
 .modal-close-btn {
     position: absolute;
@@ -673,10 +676,11 @@ body {
     width: 24px;
     height: 24px;
     
+    padding: 0;
     fill: #000000;
     background: #E7E9FC;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 50px;
+    border-radius: 50%;
 
     cursor: pointer;
 
@@ -684,12 +688,15 @@ body {
     align-items: center;
     justify-content: center;
     
+    transition: background-color var(--hover-focus-trans), border var(--hover-focus-trans);
 }
 
 .modal-close-btn:is(:hover, :focus) {
     background-color: var(--pressed-color);
     fill: #FFFFFF;;
+    border: none;
 }
 
 .modal-close-icon {
+    transition: fill var(--hover-focus-trans);
 }
