@@ -605,6 +605,15 @@ body {
     overflow: hidden;
 }
 .overlay {
+    
+}
+
+
+
+.portfolio-link:is(:hover, :focus) .overlay-text{
+    transform: translateY(0%);
+}
+.overlay-text {
     position: absolute;
     top: 0;
     left: 0;
@@ -616,12 +625,7 @@ body {
 
     transform: translateY(100%);
     transition: transform var(--hover-focus-trans);
-}
-
-.portfolio-images-item:is(:hover, :focus) .overlay{
-    transform: translateY(0%);
-}
-.overlay-text {
+    
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -643,7 +647,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: background-color: rgba(46, 47, 66, 0.4);
+    background-color: rgba(46, 47, 66, 0.4);
     backdrop-filter: blur(2px);
     z-index: var(--modal-idx);
     transition: opacity var(--hover-focus-trans), visibility var(--hover-focus-trans);
