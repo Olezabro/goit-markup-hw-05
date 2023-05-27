@@ -84,7 +84,7 @@ body {
     overflow: hidden;
   }
   .current:visited {
-    color: var(--active-color);
+    color: var(--pressed-color);
   }
 
   /* ----------- header ----------- */
@@ -142,14 +142,14 @@ body {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    color: #2E2F42;
+    color: var(--pressed-color);
     transform: scale(1);
     transition: color var(--hover-focus-trans);
 
 }
 
 .header-link:is(:hover, :focus) {
-    color: var(--active-color);
+    color: var(--pressed-color);
     
 }
 
@@ -167,7 +167,7 @@ body {
 }
 
 .header-link:is(:hover, :focus)::after {
-    background-color: var(--active-color);
+    background-color: var(--pressed-color);
     
 }
 
@@ -181,7 +181,7 @@ body {
     left: 0;
     top: calc(100% + 24px);
     bottom: -1px;
-    background-color: var(--active-color);
+    background-color: var(--pressed-color);
 }
 
 .header-adress {
