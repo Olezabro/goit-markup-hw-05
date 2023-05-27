@@ -83,8 +83,9 @@ body {
     overflow: hidden;
   }
   .current:visited {
-    color: #4D5AE5;
+    color: #404BBF;
   }
+
   /* ----------- header ----------- */
 
   .header {
@@ -132,7 +133,6 @@ body {
 }
 
 .header-item {
-    color: var(--second-color);
     
 }
 .header-link {
@@ -141,7 +141,7 @@ body {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    color: currentColor;
+    color: #2E2F42;
     transform: scale(1);
     transition: color var(--hover-focus-trans);
 
