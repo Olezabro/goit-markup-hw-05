@@ -4,6 +4,7 @@
     --second-color: #2E2F42;
     --paragraph-color: #434455;
     --pressed-color: #404BBF;
+    --active-color: #4D5AE5;
     --hover-focus-trans: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     --header-idx: 10;
     --modal-idx: 100;
@@ -83,7 +84,7 @@ body {
     overflow: hidden;
   }
   .current:visited {
-    color: #404bbf;
+    color: var(--active-color);
   }
 
   /* ----------- header ----------- */
@@ -148,7 +149,7 @@ body {
 }
 
 .header-link:is(:hover, :focus) {
-    color: var(--pressed-color);
+    color: var(--active-color);
     
 }
 
@@ -166,7 +167,7 @@ body {
 }
 
 .header-link:is(:hover, :focus)::after {
-    background-color: var(--pressed-color);
+    background-color: var(--active-color);
     
 }
 
@@ -180,7 +181,7 @@ body {
     left: 0;
     top: calc(100% + 24px);
     bottom: -1px;
-    background-color: var(--pressed-color);
+    background-color: var(--active-color);
 }
 
 .header-adress {
